@@ -133,8 +133,7 @@ select {
 }
 
 .header-action,
-.button,
-.contact-form button {
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -153,8 +152,7 @@ select {
 }
 
 .header-action svg,
-.button svg,
-.contact-form button svg {
+.button svg {
   width: 18px;
   height: 18px;
   fill: none;
@@ -587,8 +585,7 @@ select {
 }
 
 .section-heading h2,
-.loop-copy h2,
-.contact-section h2 {
+.loop-copy h2 {
   margin: 0;
   font-size: clamp(32px, 4.5vw, 56px);
   line-height: 1.08;
@@ -596,8 +593,7 @@ select {
 }
 
 .section-heading p,
-.loop-copy p,
-.contact-section p {
+.loop-copy p {
   margin: 18px 0 0;
   color: var(--muted);
   font-size: 16px;
@@ -620,8 +616,7 @@ select {
 .role-panel,
 .risk-simulator,
 .loop-steps article,
-.roadmap article,
-.contact-form {
+.roadmap article {
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -1145,6 +1140,10 @@ select {
     linear-gradient(180deg, #ffffff 0%, #f5f9fb 100%);
 }
 
+.roadmap-section {
+  padding-bottom: clamp(96px, 12vw, 142px);
+}
+
 .roadmap span {
   display: inline-flex;
   padding: 7px 10px;
@@ -1172,88 +1171,6 @@ select {
   margin: 0;
   color: var(--muted);
   line-height: 1.75;
-}
-
-.contact-section {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
-  gap: 40px;
-  align-items: center;
-  padding: clamp(76px, 9vw, 110px) clamp(20px, 6vw, 86px);
-  color: #fff;
-  background:
-    radial-gradient(circle at 85% 30%, rgba(10, 155, 145, 0.32), transparent 26%),
-    linear-gradient(135deg, #15242d, #223a45);
-}
-
-.contact-section p {
-  color: rgba(255, 255, 255, 0.76);
-}
-
-.contact-form {
-  display: grid;
-  gap: 14px;
-  padding: 18px;
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.16);
-}
-
-.contact-form label {
-  display: grid;
-  gap: 8px;
-}
-
-.contact-form span {
-  color: rgba(255, 255, 255, 0.72);
-  font-size: 12px;
-  font-weight: 900;
-}
-
-.contact-form input,
-.contact-form select {
-  width: 100%;
-  min-height: 46px;
-  padding: 0 12px;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: var(--radius);
-  outline: none;
-}
-
-.contact-form select option {
-  color: var(--ink);
-}
-
-.contact-form button {
-  min-height: 48px;
-  color: #fff;
-  background: var(--coral);
-  border-radius: var(--radius);
-}
-
-.toast {
-  position: fixed;
-  z-index: 80;
-  right: 24px;
-  bottom: 24px;
-  max-width: min(360px, calc(100% - 48px));
-  padding: 14px 16px;
-  color: #fff;
-  background: var(--ink);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  opacity: 0;
-  transform: translateY(12px);
-  pointer-events: none;
-  transition:
-    opacity 180ms ease,
-    transform 180ms ease;
-}
-
-.toast.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 @keyframes scan {
@@ -1293,8 +1210,7 @@ select {
 
   .platform-layout,
   .scenario-grid,
-  .loop-section,
-  .contact-section {
+  .loop-section {
     grid-template-columns: 1fr;
   }
 
@@ -1433,9 +1349,6 @@ select {
     height: auto;
   }
 
-  .contact-section {
-    padding: 74px 18px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
